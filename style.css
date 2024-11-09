@@ -1,0 +1,99 @@
+* {
+    margin:0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: #fff;
+    padding-top: 2%;
+    padding-left: 10%;
+}
+
+.container h1 {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.container img {
+    width: 60px;
+}
+
+.container button img {
+    width: 38px;
+    height: 28px;
+    margin-right: 8px;
+}
+
+.notes-container {
+    position: relative;
+}
+
+.notes-container img {
+    width: 25px;
+    cursor: pointer;
+    margin: 30px 440px -10px;
+}
+
+.container button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd, #571094);
+    color: #fff;
+    font-size: 16px;
+    outline: 0;
+    border: 0;
+    border-radius: 40px;
+    padding: 15px 25px;
+    margin: 30px 0 20px;
+    cursor: pointer;
+}
+
+.note-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    color: #000000c7;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+.input-box, .input-title {
+    width: 100%;
+    min-height: 30px;
+    background: transparent;
+    color: #020101;
+    border: none;
+    outline: none;
+    padding: 5px;
+    position: relative;
+}
+
+.input-title {
+    font-weight: bold;
+    min-height: 40px; /* Adjusted to fit the title */
+}
+
+.input-box::before, .input-title::before {
+    content: attr(data-placeholder);
+    color: #000000e1;
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    pointer-events: none;
+    font-size: 20px; /* Adjust font size if needed */
+    display: block;
+}
+
+.input-box[contenteditable="true"]:not(:empty)::before, 
+.input-title[contenteditable="true"]:not(:empty)::before {
+    display: none;
+}
